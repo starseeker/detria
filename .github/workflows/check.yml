@@ -24,6 +24,10 @@ jobs:
           cmake --build build --config Debug
           cmake --build build --config Release
 
+      - name: Test
+        run: |
+          ./bin/detria-test
+
   linux:
     name: Ubuntu Latest GCC
     runs-on: ubuntu-latest
@@ -43,6 +47,10 @@ jobs:
       - name: Build
         run: |
           cmake --build build
+
+      - name: Test
+        run: |
+          ./bin/detria-test
 
   osx:
     name: macOS Latest Clang
@@ -65,4 +73,8 @@ jobs:
       - name: Build
         run: |
           cmake --build build
+
+      - name: Test
+        run: |
+          ./bin/detria-test
 
