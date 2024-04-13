@@ -21,12 +21,11 @@ jobs:
 
       - name: Build
         run: |
-          cmake --build build --config Debug
           cmake --build build --config Release
 
       - name: Test
         run: |
-          ./bin/detria-test
+          ./bin/Release/detria-test.exe
 
   linux:
     name: Ubuntu Latest GCC
